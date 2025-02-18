@@ -1,8 +1,11 @@
 import { ScanTextIcon } from "lucide-react";
+import { useState } from "react";
 import { TextAnalysis } from "./components/text-analysis";
 import { TextInput } from "./components/text-input";
 
 export function App() {
+  const [text, setText] = useState("");
+
   return (
     <div className="flex min-h-svh flex-col items-center justify-center gap-6 bg-background p-6 md:p-10">
       <div className="w-full max-w-md md:max-w-3xl">
@@ -19,7 +22,7 @@ export function App() {
             </p>
           </div>
           <div className="flex flex-col gap-6">
-            <TextInput />
+            <TextInput value={text} onChange={setText} />
             <TextAnalysis />
           </div>
         </div>
