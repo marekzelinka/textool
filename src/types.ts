@@ -5,7 +5,3 @@ export interface TextAnalysis {
   sentences: string[];
   paragraphs: string[];
 }
-
-export interface TextAnalysisOptions {
-  excludeSpaces: boolean;
-}
