@@ -23,7 +23,7 @@ export function App() {
           </div>
           <div className="flex flex-col gap-6">
             <TextInput value={text} onChange={setText} />
-            <TextAnalysis />
+            <TextAnalysis value={text} />
           </div>
         </div>
       </div>
