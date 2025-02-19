@@ -18,7 +18,7 @@ export function App() {
             </div>
             <h1 className="text-xl font-bold">Welcome to Textool</h1>
             <p className="text-sm text-muted-foreground">
-              Tools to supercharge your text manipulation and analysis.
+              A better toolkit for text manipulation and analysis.
             </p>
           </div>
           <div className="flex flex-col gap-6">
