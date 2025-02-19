@@ -21,7 +21,7 @@ export function App() {
               A better toolkit for text manipulation and analysis.
             </p>
           </div>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-8">
             <TextInput value={text} onChange={setText} />
             <TextAnalysis value={text} />
           </div>
