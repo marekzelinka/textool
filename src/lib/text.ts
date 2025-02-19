@@ -21,9 +21,7 @@ export function analyzeText(text: string) {
 
     if (/\S/.test(char)) {
       stats.charsNoSpaces += 1;
-      if (!/[。！？]/.test(char)) {
-        word += char;
-      }
+      word += char;
     }
 
     if (/[^\n\0]/.test(char)) {
@@ -33,16 +31,13 @@ export function analyzeText(text: string) {
       paragraph += char;
     }
 
-    if (word.length !== 0 && /[\s\0。！？]/.test(peek)) {
-      word = word.replace(/[.!?。！？]*$/, "");
+    if (word.length !== 0 && /[\s\0]/.test(peek)) {
+      word = word.replace(/\.*$|[!?]*$/, "");
       stats.words.push(word);
       word = "";
     }
 
-    if (
-      (sentence.length !== 0 && /[.!?]/.test(char) && /[\s\0]/.test(peek)) ||
-      /[。！？]/.test(char)
-    ) {
+    if (sentence.length !== 0 && /[.!?]/.test(char) && /[\s\0]/.test(peek)) {
       stats.sentences.push(sentence);
       sentence = "";
     }
